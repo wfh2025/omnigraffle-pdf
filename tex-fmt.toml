@@ -2,7 +2,7 @@
 check = false
 print = false
 wrap = true
-wraplen = 80
+wraplen = 120
 tabsize = 2
 tabchar = "space"
 stdin = false

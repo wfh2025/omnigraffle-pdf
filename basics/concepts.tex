@@ -2,7 +2,7 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Basic Concepts}
-When you first open OmniGraffle, there's a lot to absorb, 
+When you first open OmniGraffle, there's a lot to absorb,
 but you can boil down the interface into four main areas: the Toolbar, Sidebar, \mbox{Inspectors}, and the Canvas.
 \begin{figure}[H]
   \centering
@@ -16,140 +16,206 @@ but you can boil down the interface into four main areas: the Toolbar, Sidebar, 
   \item The \textbf{Canvas} is where you draw things.
 \end{itemize}
 
-Yes, there's a lot more to it than that, and that's what this chapter is for; 
-to provide you with a gentle introduction to some of OmniGraffle's key components and concepts so you can quickly get to work.
+Yes, there's a lot more to it than that, and that's what this chapter is for;
+to provide you with a gentle introduction to some of OmniGraffle's key components and concepts so you can
+quickly get to work.
 
 \section{OmniGraffle Glossary}
-Every piece of software you use has a core set of terminology, and like those apps, OmniGraffle has a common nomenclature. To better help you understand the terms and terminology used when describing the interface or how to work in OmniGraffle, we're providing this brief \textit{lingua franca}.
+Every piece of software you use has a core set of terminology, and like those apps, OmniGraffle has a common
+nomenclature. To better help you understand the terms and terminology used when describing the interface or
+how to work in OmniGraffle, we're providing this brief \textit{lingua franca}.
 
 \begin{description}[
-  style=nextline,
-]
-  \item[Artboard] An \textit{artboard} is a special type of layer whose objects define an export area, or act as a container, for objects on \textit{standard} or \textit{shared layers} higher up in the layer stack.
-  \item[Bounding Box] The rectangular area that defines the \textit{space} an object occupies on the canvas is known as the \textit{bounding box}. Bounding boxes have eight handles (one at each corner and centerpoint of the box), which you can click and drag to resize an object. 
-  \item[Canvas] The \textit{canvas} is the big white area in the center of OmniGraffle's interface where you draw and create things. An OmniGraffle project always contains at least one canvas and one layer.
-  \item[Document/Project] When you create a new file in OmniGraffle, the basic type of file you can create is a \textit{document}. However, documents tend to be associated with wordy things, not designy things, so throughout the documentation, you'll see us reference these as \textbf{OmniGraffle Projects}.
-  \item[Group] A \textit{group} consists of two or more objects that are bound to each other. An object group, when selected, can be styled and moved on the canvas as a single unit; the styles you apply using the Object inspectors are assigned to each object in the group.
-  \item[Guides] There are two types of guides that you'll see in OmniGraffle:
-  \begin{itemize}[
-    leftmargin=1.5em,
-  ]
-    \item \textbf{Ruler Guides}, which are pink by default, are guides that you dra
-    \item \textbf{Smart Guides}, which are light blue by default, appear when you are aligning objects on the canvas.
-  \end{itemize}
-
-  You can change the default colors of Ruler and Smart Guides by choosing 
-  \textbf{OmniGraffle} $\blacktriangleright$ 
-  \textbf{Preferences} $\blacktriangleright$ \textbf{Appearance}.
-
-  \item[Inspector] You use an \textit{inspector} to define the styles and properties of an object, define the canvas area and units of measurement, and set document properties for saving and printing your OmniGraffle projects. 
-    The individual inspectors are contained in four separate \textit{tabs} of the Inspector Bar, located to the right of the canvas.
-  \item[Inspector Bar] The \textbf{Inspector} bar is located to the right of the canvas. Similar to the Sidebar, the Inspector has four tabs which contain specific categories of inspectors:
-  \begin{itemize}[
-    leftmargin=3em,
-  ]
-    \item Use the \textbf{Object} inspectors to style, size, and arrange the objects you create.
-    \item Use the \textbf{Properties} inspectors to define how and where lines connect to other objects. If you have OmniGraffle Pro, you can also add Notes and key-value metadata for the objects you create, and assign actions to objects.
-    
-    \begin{tcolorbox}[
-      enhanced,
-      colback=gray!10,       
-      colframe=gray!10,     
-      borderline west={2pt}{0pt}{green!60}, 
-      boxsep=0pt,
-      left=1em,
-      right=1em,
-      top=1.2em,            
-      bottom=0.8em,
-      fonttitle=\bfseries\color{black}, 
-      title=Tip,
-      attach boxed title to top left={yshift=-0.8em, xshift=1em},
-      boxed title style={
-        colback=gray!20,     
-        colframe=gray!20, 
-        boxsep=0.3em,
-        top=0.1em,
-        bottom=0.1em
-      }
+      style=nextline,
     ]
-    If you have two or more objects selected on the canvas, you can use any of the Object and Properties inspectors to apply style and property changes to the selected objects.
-    \end{tcolorbox}
+  \item[Artboard] An \textit{artboard} is a special type of layer whose objects define an export area, or act
+    as a container, for objects on \textit{standard} or \textit{shared layers} higher up in the layer stack.
+  \item[Bounding Box] The rectangular area that defines the \textit{space} an object occupies on the canvas
+    is known as the \textit{bounding box}. Bounding boxes have eight handles (one at each corner and
+    centerpoint of the box), which you can click and drag to resize an object.
+  \item[Canvas] The \textit{canvas} is the big white area in the center of OmniGraffle's interface where you
+    draw and create things. An OmniGraffle project always contains at least one canvas and one layer.
+  \item[Document/Project] When you create a new file in OmniGraffle, the basic type of file you can create is
+    a \textit{document}. However, documents tend to be associated with wordy things, not designy things, so
+    throughout the documentation, you'll see us reference these as \textbf{OmniGraffle Projects}.
+  \item[Group] A \textit{group} consists of two or more objects that are bound to each other. An object
+    group, when selected, can be styled and moved on the canvas as a single unit; the styles you apply using
+    the Object inspectors are assigned to each object in the group.
+  \item[Guides] There are two types of guides that you'll see in OmniGraffle:
+    \begin{itemize}[
+          leftmargin=1.5em,
+        ]
+      \item \textbf{Ruler Guides}, which are pink by default, are guides that you dra
+      \item \textbf{Smart Guides}, which are light blue by default, appear when you are aligning objects on the canvas.
+    \end{itemize}
 
+    You can change the default colors of Ruler and Smart Guides by choosing
+    \textbf{OmniGraffle} $\blacktriangleright$
+    \textbf{Preferences} $\blacktriangleright$ \textbf{Appearance}.
 
-    \item Use the \textbf{Canvas} inspectors to define the selected canvas. If your project has multiple canvases, you can set each canvas's properties independently. The Canvas inspectors are used to set the canvas's dimensions, choose whether the canvas automatically expands when working on the canvas, set an \textit{infinite} canvas, assign a background color or image fill to the canvas, and more.
-    \item Use the \textbf{Document} inspectors to define how your OmniGraffle project file is saved, set printer margins, and add document-wide metadata for the project. Unlike the Canvas inspectors, which can be set on a canvas-by-canvas basis, the settings you choose in the Document inspectors apply to the everything in your project.
-  \end{itemize}
+  \item[Inspector] You use an \textit{inspector} to define the styles and properties of an object, define the
+    canvas area and units of measurement, and set document properties for saving and printing your OmniGraffle projects.
+    The individual inspectors are contained in four separate \textit{tabs} of the Inspector Bar, located to
+    the right of the canvas.
+  \item[Inspector Bar] The \textbf{Inspector} bar is located to the right of the canvas. Similar to the
+    Sidebar, the Inspector has four tabs which contain specific categories of inspectors:
+    \begin{itemize}[
+          leftmargin=3em,
+        ]
+      \item Use the \textbf{Object} inspectors to style, size, and arrange the objects you create.
+      \item Use the \textbf{Properties} inspectors to define how and where lines connect to other objects. If
+        you have OmniGraffle Pro, you can also add Notes and key-value metadata for the objects you create,
+        and assign actions to objects.
 
-  \item[Keyboard Shortcut] A set of keys you press to invoke a menu command, or a single character or number key that you press to select one of OmniGraffle's tools. You can change OmniGraffle's default keyboard shortcuts by choosing OmniGraffle $\blacktriangleright$ Keyboard Shortcuts from the menu bar.
+        \begin{tcolorbox}[
+            enhanced,
+            colback=gray!10,
+            colframe=gray!10,
+            borderline west={2pt}{0pt}{green!60},
+            boxsep=0pt,
+            left=1em,
+            right=1em,
+            top=1.2em,
+            bottom=0.8em,
+            fonttitle=\bfseries\color{black},
+            title=Tip,
+            attach boxed title to top left={yshift=-0.8em, xshift=1em},
+            boxed title style={
+              colback=gray!20,
+              colframe=gray!20,
+              boxsep=0.3em,
+              top=0.1em,
+              bottom=0.1em
+            }
+          ]
+          If you have two or more objects selected on the canvas, you can use any of the Object and
+          Properties inspectors to apply style and property changes to the selected objects.
+        \end{tcolorbox}
+
+      \item Use the \textbf{Canvas} inspectors to define the selected canvas. If your project has multiple
+        canvases, you can set each canvas's properties independently. The Canvas inspectors are used to set
+        the canvas's dimensions, choose whether the canvas automatically expands when working on the canvas,
+        set an \textit{infinite} canvas, assign a background color or image fill to the canvas, and more.
+      \item Use the \textbf{Document} inspectors to define how your OmniGraffle project file is saved, set
+        printer margins, and add document-wide metadata for the project. Unlike the Canvas inspectors, which
+        can be set on a canvas-by-canvas basis, the settings you choose in the Document inspectors apply to
+        the everything in your project.
+    \end{itemize}
+
+  \item[Keyboard Shortcut] A set of keys you press to invoke a menu command, or a single character or number
+    key that you press to select one of OmniGraffle's tools. You can change OmniGraffle's default keyboard
+    shortcuts by choosing OmniGraffle $\blacktriangleright$ Keyboard Shortcuts from the menu bar.
   \item[Layer] A layer contains the objects that you draw. There are three different types of layers in OmniGraffle:
     \begin{itemize}[
-      leftmargin=3em,
-    ]
+          leftmargin=3em,
+        ]
       \item \textbf{Standard Layer} — this is the basic layer type, available in both OmniGraffle Standard and Pro.
-      \item \textbf{Shared Layer} — shared layers are used to share objects with multiple canvases in your project. Shared layers are only available in OmniGraffle Pro.
+      \item \textbf{Shared Layer} — shared layers are used to share objects with multiple canvases in your
+        project. Shared layers are only available in OmniGraffle Pro.
       \item \textbf{Artboard Layer} — artboard layers contain a new object type in OmniGraffle Pro, the artboard.
       \item \textbf{Shared Artboard Layer} — an artboard layer that is shared with other canvases in the document.
     \end{itemize}
     Canvases can contain multiple layers of any type.
-  \item[Layer Stack] The order in which layers appear in the \textit{sidebar}. When a canvas has multiple layers, those layers are stacked on top of each other. Layers can be repositioned in the stack by dragging them up or down in the sidebar.
-  \item[Line] A \textit{line} can be a standalone object on the canvas, or used to connect two or more shapes together. To create a line, use the \textbf{Line tool}. Use the Stroke inspector to change the line's style properties, and the Line inspector to change the line type, apply line ends, and define how lines hop each other.
-  \item[Movement Handle] A movement handle appears in the center of an object's bounding box after choosing \textbf{View} $\blacktriangleright$ \textbf{Movement Handles} from the menu bar. Once enabled, \textbf{click-and-drag} on a Movement Handle to move an object on the canvas.
-  \item[Object/Shape] The things you draw on the canvas are known as \textit{objects}. An object can be a shape that you draw with the Shape or Pen tools, a line that you draw with the Line tool, or a block of text or line label that you enter using the Text tool. If you have OmniGraffle Pro, you can also use the Artboard tool to add an artboard to your project, or to convert text and lines to shapes.
-  \item[Ruler] Positioned to the left and above the \textit{canvas} are the rulers. The rulers reflect the units of measurement set in the Units inspector, and are initially based on the template used when creating a new OmniGraffle document. You can hide and show the rulers by pressing \textbf{Command-R}.
-  \item[Sidebar] The \textit{sidebar} to the left of the canvas, is used for managing everything in your project. You can organize and rename the canvases, layers, objects, and groups of objects here. The sidebar has four tabs which you can click to switch between different things in your project:
+  \item[Layer Stack] The order in which layers appear in the \textit{sidebar}. When a canvas has multiple
+    layers, those layers are stacked on top of each other. Layers can be repositioned in the stack by
+    dragging them up or down in the sidebar.
+  \item[Line] A \textit{line} can be a standalone object on the canvas, or used to connect two or more shapes
+    together. To create a line, use the \textbf{Line tool}. Use the Stroke inspector to change the line's
+    style properties, and the Line inspector to change the line type, apply line ends, and define how lines
+    hop each other.
+  \item[Movement Handle] A movement handle appears in the center of an object's bounding box after choosing
+    \textbf{View} $\blacktriangleright$ \textbf{Movement Handles} from the menu bar. Once enabled,
+    \textbf{click-and-drag} on a Movement Handle to move an object on the canvas.
+  \item[Object/Shape] The things you draw on the canvas are known as \textit{objects}. An object can be a
+    shape that you draw with the Shape or Pen tools, a line that you draw with the Line tool, or a block of
+    text or line label that you enter using the Text tool. If you have OmniGraffle Pro, you can also use the
+    Artboard tool to add an artboard to your project, or to convert text and lines to shapes.
+  \item[Ruler] Positioned to the left and above the \textit{canvas} are the rulers. The rulers reflect the
+    units of measurement set in the Units inspector, and are initially based on the template used when
+    creating a new OmniGraffle document. You can hide and show the rulers by pressing \textbf{Command-R}.
+  \item[Sidebar] The \textit{sidebar} to the left of the canvas, is used for managing everything in your
+    project. You can organize and rename the canvases, layers, objects, and groups of objects here. The
+    sidebar has four tabs which you can click to switch between different things in your project:
     \begin{itemize}[
-      leftmargin=3em,
-    ]
-      \item Use the \textbf{Layers} tab to organize and rename the canvases, layers, objects, and groups of objects in your project.
-      \item Use the \textbf{Guides} tab to add, position, and change the colors of the guides you drag onto the canvas from the rulers.
-      \item Use the \textbf{Outline} tab to rapidly create and label objects for a diagram or flow chart; things of a hierarchical nature.
+          leftmargin=3em,
+        ]
+      \item Use the \textbf{Layers} tab to organize and rename the canvases, layers, objects, and groups of
+        objects in your project.
+      \item Use the \textbf{Guides} tab to add, position, and change the colors of the guides you drag onto
+        the canvas from the rulers.
+      \item Use the \textbf{Outline} tab to rapidly create and label objects for a diagram or flow chart;
+        things of a hierarchical nature.
       \item Use the \textbf{Selection} tab to select, style, and interact with objects based on their properties.
     \end{itemize}
-  \item[Stencil] A \textit{stencil} is a reusable shape that can be dragged onto the canvas from the \textbf{Stencil Browser}. Stencils can be as simple as a square or triangle, or as complex as a multilayered and meticulously drawn illustration. For more details about stencils and the Stencil Browser, see Using, Curating, and Creating Stencils.
-  \item[Stencil Browser] A means of accessing stencils in OmniGraffle. By default, the Stencil Browser is available in the right sidebar. However, you can also relocate the Stencil Browser to the left sidebar, view it as a popup menu from the toolbar, or use it as a floating window. For more details about stencils and the Stencil Browser, see Using, Curating, and Creating Stencils.
-  \item[Stroke] A \textit{stroke} is the line that borders an object. To remove or apply styles to an object's stroke, or to a line created with the \textbf{Line tool}, use the \textbf{Stroke inspector}.
-  \item[Subgraph] A subgraph is a special kind of group that can be expanded to show the hierarchy inside it, or collapsed to make it a single compact object.
+  \item[Stencil] A \textit{stencil} is a reusable shape that can be dragged onto the canvas from the
+    \textbf{Stencil Browser}. Stencils can be as simple as a square or triangle, or as complex as a
+    multilayered and meticulously drawn illustration. For more details about stencils and the Stencil
+    Browser, see Using, Curating, and Creating Stencils.
+  \item[Stencil Browser] A means of accessing stencils in OmniGraffle. By default, the Stencil Browser is
+    available in the right sidebar. However, you can also relocate the Stencil Browser to the left sidebar,
+    view it as a popup menu from the toolbar, or use it as a floating window. For more details about stencils
+    and the Stencil Browser, see Using, Curating, and Creating Stencils.
+  \item[Stroke] A \textit{stroke} is the line that borders an object. To remove or apply styles to an
+    object's stroke, or to a line created with the \textbf{Line tool}, use the \textbf{Stroke inspector}.
+  \item[Subgraph] A subgraph is a special kind of group that can be expanded to show the hierarchy inside it,
+    or collapsed to make it a single compact object.
   \item[Table] A table is a special kind of group that organizes rows and columns of objects.
-  \item[Template] An OmniGraffle file type that contains the base settings, such as the canvas size and units of measurement, used when creating new OmniGraffle documents (\textbf{File} $\blacktriangleright$ \textbf{New}). You can also apply a template's styles to an existing diagram by choosing \textbf{Format} $\blacktriangleright$ \textbf{Choose Diagram Style}. Use the sheet that appears to select from one of OmniGraffle's templates to apply its styles to your project.
-  \item[Toolbar, Tool Palette, and Tools] The region along the top of OmniGraffle's window is the \textit{toolbar}. The toolbar contains buttons for opening and closing the Sidebar (to the left of the canvas) and the Inspector sidebar (to the right of the canvas). In the middle of the toolbar, you'll find the \textbf{tool palette}, which contains the tools you use in OmniGraffle to select, draw, connect, create, and interact with objects.
+  \item[Template] An OmniGraffle file type that contains the base settings, such as the canvas size and units
+    of measurement, used when creating new OmniGraffle documents (\textbf{File} $\blacktriangleright$
+    \textbf{New}). You can also apply a template's styles to an existing diagram by choosing \textbf{Format}
+    $\blacktriangleright$ \textbf{Choose Diagram Style}. Use the sheet that appears to select from one of
+    OmniGraffle's templates to apply its styles to your project.
+  \item[Toolbar, Tool Palette, and Tools] The region along the top of OmniGraffle's window is the
+    \textit{toolbar}. The toolbar contains buttons for opening and closing the Sidebar (to the left of the
+    canvas) and the Inspector sidebar (to the right of the canvas). In the middle of the toolbar, you'll find
+    the \textbf{tool palette}, which contains the tools you use in OmniGraffle to select, draw, connect,
+    create, and interact with objects.
 \end{description}
-Now that you have a better understanding of OmniGraffle's \textit{lingua franca}, it's time to dive in and learn more about the basics of using OmniGraffle.
+Now that you have a better understanding of OmniGraffle's \textit{lingua franca}, it's time to dive in and
+learn more about the basics of using OmniGraffle.
 
 \section{Understanding the Canvas}
-The canvas is where you create, edit, and move objects around in your project. By default, every OmniGraffle document contains at least one canvas with one layer, and you can add as many canvases as you'd like.
+The canvas is where you create, edit, and move objects around in your project. By default, every OmniGraffle
+document contains at least one canvas with one layer, and you can add as many canvases as you'd like.
 
-Canvases give you the flexibility to separate your work into distinct areas within the same project file. Not sure if you like how an illustration you've been working on is coming together? Duplicate the canvas and apply a new set of styles so you can see which one you like best.
+Canvases give you the flexibility to separate your work into distinct areas within the same project file. Not
+sure if you like how an illustration you've been working on is coming together? Duplicate the canvas and
+apply a new set of styles so you can see which one you like best.
 
-To work on a canvas, select the canvas by either clicking its name or the preview icon in the sidebar. When you do, the preview icon takes on a light blue highlight, and any objects appear on the working canvas in the middle of OmniGraffle's window.
+To work on a canvas, select the canvas by either clicking its name or the preview icon in the sidebar. When
+you do, the preview icon takes on a light blue highlight, and any objects appear on the working canvas in the
+middle of OmniGraffle's window.
 
 To delete a canvas, select the preview image in the sidebar and then use one of the following options:
 \begin{itemize}
   \item Press the \textbf{Delete} key;
   \item Choose \textbf{Edit} $\blacktriangleright$ \textbf{Canvases} $\blacktriangleright$ \textbf{Delete Canvas};
-  \item \textbf{Control-/Right-click} on the preview icon and select \textbf{Delete} Canvas from the contextual menu; or,
-  \item Choose \textbf{Delete Canvas} from the \textbf{Action} menu at the bottom of the Sidebar next to the Search field.
+  \item \textbf{Control-/Right-click} on the preview icon and select \textbf{Delete} Canvas from the
+    contextual menu; or,
+  \item Choose \textbf{Delete Canvas} from the \textbf{Action} menu at the bottom of the Sidebar next to the
+    Search field.
     \begin{tcolorbox}[
-      enhanced,
-      colback=gray!15,
-      colframe=gray!15,
-      borderline west={2pt}{0pt}{blue!80},
-      boxsep=0pt,
-      left=1em, 
-      right=1em,
-      top=1.2em, 
-      bottom=1em, 
-      title=Note,   
-      fonttitle=\bfseries\color{black},
-      attach boxed title to top left={yshift=-0.8em, xshift=1em},
-      boxed title style={
-        colback=gray!20,      
-        colframe=gray!20,      
-        rounded corners,       
-        boxsep=0.3em,
-        top=0.1em,
-        bottom=0.1em
-      }
-    ]
+        enhanced,
+        colback=gray!15,
+        colframe=gray!15,
+        borderline west={2pt}{0pt}{blue!80},
+        boxsep=0pt,
+        left=1em,
+        right=1em,
+        top=1.2em,
+        bottom=1em,
+        title=Note,
+        fonttitle=\bfseries\color{black},
+        attach boxed title to top left={yshift=-0.8em, xshift=1em},
+        boxed title style={
+          colback=gray!20,
+          colframe=gray!20,
+          rounded corners,
+          boxsep=0.3em,
+          top=0.1em,
+          bottom=0.1em
+        }
+      ]
       OmniGraffle projects need at least one Canvas; you cannot delete the last one.
     \end{tcolorbox}
 \end{itemize}
