@@ -220,8 +220,358 @@ To delete a canvas, select the preview image in the sidebar and then use one of 
     \end{tcolorbox}
 \end{itemize}
 
+\subsection{Configuring the Canvas}
+When you create a new project in OmniGraffle, one of the first things you might consider doing is taking a
+pass through the \textbf{Canvas Inspectors} (\textbf{Inspectors} $\blacktriangleright$ \textbf{Canvas}).
+These inspectors are fully defined in Working With the Inspectors, but here's a brief overview:
+\begin{itemize}
+  \item \textbf{Canvas Size} — Use the Canvas Size inspector to choose a \textbf{Canvas Mode} (Fixed,
+    Flexible, or Infinite),
+    and define the printing options for this canvas.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_canvassize.png}
+    \end{figure}
+    \begin{itemize}
+      \item \textbf{Fixed}: A canvas with its width and height set to a specific size; for example, $1024
+        \times 768$ pixels.
+      \item \textbf{Flexible}: A canvas which expands in a specified direction (up, down, left, or right) to
+        suit your needs.
+      \item \textbf{Infinite}: A canvas that extends infinitely in all directions.
+    \end{itemize}
+  \item \textbf{Canvas Fill} — Use the Canvas Fill inspector to apply a fill color or pattern to the canvas.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_canvasfill.png}
+    \end{figure}
+  \item \textbf{Background Image} — Use the Background Image inspector to select and use an image as the background
+    for the canvas.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_backgroundimg.png}
+    \end{figure}
+
+    \begin{tcolorbox}[
+        enhanced,
+        colback=gray!15,
+        colframe=gray!15,
+        borderline west={2pt}{0pt}{blue!80},
+        boxsep=0pt,
+        left=1em,
+        right=1em,
+        top=1.2em,
+        bottom=1em,
+        title=Note,
+        fonttitle=\bfseries\color{black},
+        attach boxed title to top left={yshift=-0.8em, xshift=1em},
+        boxed title style={
+          colback=gray!20,
+          colframe=gray!20,
+          rounded corners,
+          boxsep=0.3em,
+          top=0.1em,
+          bottom=0.1em
+        }
+      ]
+      If you choose to use both a Canvas Fill and a Background Image on the canvas, note that the Background
+      Image sits in the foreground, above the Canvas Fill.
+
+      Also, if you would like the Canvas Fill or Background Image to be included as part of any image export,
+      be sure to uncheck \textbf{Transparent background} in the export panel. For more details, see Exporting Image
+      and Graphics Files from OmniGraffle.
+    \end{tcolorbox}
+
+  \item \textbf{Units} — Use the Units inspector to define the units of measurement and how objects scale on the canvas.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_units.png}
+    \end{figure}
+  \item \textbf{Grid} — Use the Grid inspector to specify the distance between major (thicker) or minor (thinner) grid
+    lines, their color, and whether shapes on the canvas will snap to the grid when moved into position.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_grid.png}
+    \end{figure}
+  \item \textbf{Diagram Layout and Style} — Use the Diagram Layout and Style inspector to turn \textbf{Auto
+    Layout} on or off,
+    to set how connected objects flow in a diagram, and to apply diagram styles to objects in the canvas.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_diagramlayout.png}
+    \end{figure}
+    See Diagramming Basics for a quick tutorial on diagramming in OmniGraffle.
+  \item \textbf{Canvas Data} — Use the Canvas Data inspector to change the name of the current canvas, add a
+    descriptive note, or to set key-value pairs of metadata to help further define your project.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_insp_canvasdata.png}
+    \end{figure}
+    Some examples of changes you might want to make to the Canvas prior to starting your work include:
+    \begin{itemize}
+      \item If you are creating diagrams and flowcharts, you might want to turn on \textbf{Auto layout} in
+        the \textbf{Diagram Layout and Style} inspector.
+      \item If you are creating icons for use in an app you're prototyping, you might want to use the \textbf{Units}
+        inspector to set the \textbf{Ruler Units} to pixels, and then adjust the \textbf{Scale} according to
+        the assets you
+        need to export.
+      \item If you want pixel-perfect alignment, you could change the \textbf{Major Grid Steps} to 1 px; each square
+        in the grid is now 1 px $\times$ 1 px, which is perfect for creating pixel art.
+    \end{itemize}
+\end{itemize}
+But the most interesting change you can make to the canvas comes up in the next section: \textit{Infinite Canvas}!
+
+\subsection{Rulers and Ruler Units}
+Bordering the Canvas—along the left and top edges—are the Rulers. You can also hide or show the rulers by
+choosing View $\blacktriangleright$ Rulers (Command-R).
+
+The point at which the rulers meet—the upper-left corner—is known as the Ruler Origin Point. This is the
+point from which all ruler measurements originate; its coordinates are 0,0.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_ruleroriginpoint.png}
+\end{figure}
+To change the origin, click and drag the origin from the corner where the rulers meet. Alternatively, you can
+enter Origin values in the Units inspector. To reset the origin to the 0,0 position, click on the origin
+point between the two rulers. Click the origin point again and the origin point changes to its previous position.
+
+\begin{tcolorbox}[
+    colframe=lightgray,
+    colback=white,
+    boxrule=1pt,
+    arc=0pt,
+    left=10pt,right=10pt,top=10pt,bottom=10pt,
+  ]
+  What Happens to the Canvas Origin with an Infinite Canvas?
+
+  In earlier versions of OmniGraffle, the Canvas Origin—the point from which the canvas expands when
+  autosizing—has always been designated as 0,0, the top-left corner of the canvas. But what happens to the
+  Origin when you have an Infinite Canvas?
+
+  With an Infinite Canvas, the \textbf{0,0} Origin still exists, but if you look closely at the rulers, you'll notice
+  that the rulers extend into the negative space. This means that you can have an Origin of \textbf{0,-100}
+  or \textbf{-100,0},
+  or whatever you'd like.
+
+  You can change the coordinates for the Origin point in the \textbf{Units} inspector, or you can temporarily move the
+  Origin by clicking and dragging the \textbf{Origin Guides} out from the square above and to the left of the rulers:
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{res/og7_infinitecanvas_sidebar01.png}
+  \end{figure}
+
+  The Origin Guides are great for helping you work in an infinite space. You can drag them out to an object
+  and, effectively, reposition the rulers at the same time.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{res/og7_infinitecanvas_sidebar02.png}
+  \end{figure}
+
+  To reposition the Origin Guides to their previous position, just click the Origin point by the rulers again.
+\end{tcolorbox}
+
+\subsubsection{Changing Ruler Units to Suit Your Design Needs}
+The rulers reflect the units of measure defined in the default template, but you can also change the \textbf{Ruler
+Units} in the Units inspector (choose \textbf{Inspectors} $\blacktriangleright$ \textbf{Canvas}).
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_rulerunits01.png}
+\end{figure}
+
+\begin{itemize}
+  \item Pixels (px)
+  \item Points (pt)*
+  \item Picas (p)
+  \item Millimeters (mm)
+  \item Centimeters (cm)$^*$
+  \item Meters (m)
+  \item Kilometers (km)
+  \item Inches, fractional ("or in$^*$)
+  \item Inches, decimal (in)
+  \item Feet (ft or ')
+  \item Yards (yd)
+  \item Miles (mi)
+\end{itemize}
+Ruler units followed by an asterisk $^*$ in the previous list means that these measurement types will print
+true to size when selected.
+\begin{tcolorbox}[
+    enhanced,
+    colback=gray!15,
+    colframe=gray!15,
+    borderline west={2pt}{0pt}{blue!80},
+    boxsep=0pt,
+    left=1em,
+    right=1em,
+    top=1.2em,
+    bottom=1em,
+    title=Note,
+    fonttitle=\bfseries\color{black},
+    attach boxed title to top left={yshift=-0.8em, xshift=1em},
+    boxed title style={
+      colback=gray!20,
+      colframe=gray!20,
+      rounded corners,
+      boxsep=0.3em,
+      top=0.1em,
+      bottom=0.1em
+    }
+  ]
+  The \textbf{Units} inspector also offers the option for you to set a custom Scale. For example, you could
+  specify that 1 inch on the canvas is the equivalent to 10 feet, or for really long distances, 100 pixels
+  could represent 93 million miles.
+\end{tcolorbox}
+You can also change the ruler units by Control- or Right-clicking on the ruler or the Canvas itself. For
+example, Control-/Right-clicking on the Rulers provides you with options for hiding and showing the Rulers
+and Guides, as well as changing the Ruler Units.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_rulerunits02.png}
+\end{figure}
+While Control-/Right-clicking on the Canvas gives you quick access to other options, including the ability to
+add or duplicate Canvases and Layers, and for controlling the Grid and Guides.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_rulerunits03.png}
+\end{figure}
+Note that in both cases, the context menu displays the current setting next to the \textbf{Ruler Units} menu item.
+The unit type specified in the template you choose, or as set in the Units inspector, determines how other
+inspectors deal with units of measurement. For example, if Ruler Units are set to centimeters (cm), you will
+see this unit of measurement reflected in the following inspectors:
+\begin{itemize}
+  \item Geometry
+  \item Alignment
+  \item Size
+  \item Grid
+  \item Diagram Layout and Style
+  \item Margins
+\end{itemize}
+
+The Stroke, Shadow, Shape, Line, and Font inspectors specify their units in points (pt) regardless of the
+Ruler Units setting.
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=gray!15,
+    colframe=gray!15,
+    borderline west={2pt}{0pt}{blue!80},
+    boxsep=0pt,
+    left=1em,
+    right=1em,
+    top=1.2em,
+    bottom=1em,
+    title=Note,
+    fonttitle=\bfseries\color{black},
+    attach boxed title to top left={yshift=-0.8em, xshift=1em},
+    boxed title style={
+      colback=gray!20,
+      colframe=gray!20,
+      rounded corners,
+      boxsep=0.3em,
+      top=0.1em,
+      bottom=0.1em
+    }
+  ]
+  See Working With the Inspectors later in this guide for more details about the individual inspectors.
+\end{tcolorbox}
+
 \section{Toolbar Basics}
+Along the top of OmniGraffle's window is the \textbf{Toolbar}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_toolbar01.png}
+\end{figure}
+
+The toolbar has buttons for nearly every function in OmniGraffle. From buttons for opening and closing the
+Sidebar and the Inspector bar, to the Tool Palette at its center, everything you need to work in OmniGraffle
+is just one click away.
+
+You use the tools in the Tool Palette to work on the canvas. For example, you use the Selection tool to
+select and move objects, the Shape or Pen tools to draw shapes, the Line tool to draw lines or to connect
+shapes in a diagram or flowchart together, or the new Point Editor tool to further customize the shapes you draw.
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=gray!15,
+    colframe=gray!15,
+    borderline west={2pt}{0pt}{blue!80},
+    boxsep=0pt,
+    left=1em,
+    right=1em,
+    top=1.2em,
+    bottom=1em,
+    title=Note,
+    fonttitle=\bfseries\color{black},
+    attach boxed title to top left={yshift=-0.8em, xshift=1em},
+    boxed title style={
+      colback=gray!20,
+      colframe=gray!20,
+      rounded corners,
+      boxsep=0.3em,
+      top=0.1em,
+      bottom=0.1em
+    }
+  ]
+  For a detailed overview of the tools in the Tool Palette, see Using the Tools, later in this guide.
+\end{tcolorbox}
+Above the Tool Palette, you'll see a \textit{document icon}. Next to that is the filename, and if your OmniGraffle
+file has more than one Canvas, the filename is appended by a colon (:) followed by the name of the canvas
+you're presently working on.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_docicon.png}
+\end{figure}
+
+If you \textbf{Command-click} on the document icon, you'll get a contextual menu that shows you where the file is stored
+on your Mac. This is sometimes handy for when you're working on duplicated files and you can't remember where
+you saved the last revision.
+
+\subsection{Bounding Box Basics}
+If you are new to design apps, such as OmniGraffle, you may not be familiar with what a \textit{bounding box}
+is and how to use them. An object's bounding box appears when you select an object with the \textbf{Selection} tool.
+
+Everything you add to the canvas—a shape, line, or an image—is surrounded by what's known as a
+\textbf{bounding box}. A bounding box defines an object or selection's width and height, and consists of
+eight selection handles which you can use to resize an object.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_boundingbox01.png}
+\end{figure}
+
+A bounding box is ``drawn'' around one or more selected objects:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_boundingbox02.png}
+\end{figure}
+If the selected objects are part of a group, the bounding box has a light blue highlight:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_boundingbox03.png}
+\end{figure}
+Once selected, you can \textbf{click-and-drag} on any one of the selection handles to resize the object:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_boundingbox04.png}
+\end{figure}
+
+If you \textbf{Shift-click-and-drag} on any of the selection handles, the object (or selection or group)
+resizes proportionally:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_boundingbox05.png}
+\end{figure}
+Press \textbf{Option-Shift} and then \textbf{click-and-drag} on any of the selection handles to
+proportionally resize an object (or selection or group) based on its center point:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_concepts_boundingbox06.png}
+\end{figure}
+To deselect any selected objects, press \textbf{Esc} on your keyboard.
+
 \section{The Left Sidebar}
+\subsection{Getting to Know “The Stack”}
+\subsubsection{Working with Just One Layer}
+\subsubsection{Managing Multiple Layers}
+\subsubsection{Managing Projects with Multiple Canvases}
 \section{The Inspector Sidebar}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
