@@ -2,13 +2,15 @@
 \ProvidesPackage{art-book}
 
 \usepackage{subfiles}
-\usepackage[inline]{enumitem}
 \usepackage{listings}
 \usepackage{todonotes}
 \usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage[table]{xcolor}
 \usepackage[listings, skins, breakable, xparse, raster, hooks,
 theorems, fitting]{tcolorbox}
+\tcbuselibrary{skins}
 \usepackage[
   colorlinks = true,
   linkcolor = black,
@@ -22,10 +24,27 @@ theorems, fitting]{tcolorbox}
 \usepackage{amssymb}
 \usepackage{marvosym}
 
+\usepackage{enumitem}
+\setlist[itemize] {
+  itemsep=0pt,  % 列表项之间的垂直距离
+  parsep=0pt,   % 列表项内段落间距
+  topsep=4pt,   % 列表与是上文间距
+  leftmargin=*  % 列表左缩进
+}
+
+\usepackage{fontawesome5}
+
+% 单倍行间距
+\usepackage{setspace}
+\singlespacing
+
 % 常量
 \renewcommand{\listfigurename}{示意图}
 \renewcommand{\lstlistingname}{示例}
 \renewcommand{\lstlistlistingname}{示意代码}
+
+\setcounter{tocdepth}{4}    % 目录显示到\subparagraph{}
+\setcounter{secnumdepth}{4} % 章节编号显示到\subparagraph{}
 
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
 \definecolor{frenchplum}{RGB}{190,20,83}
