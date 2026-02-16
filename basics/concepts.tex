@@ -568,10 +568,243 @@ proportionally resize an object (or selection or group) based on its center poin
 To deselect any selected objects, press \textbf{Esc} on your keyboard.
 
 \section{The Left Sidebar}
+The sidebar on the left of OmniGraffle's window is where you organize your project. Each OmniGraffle project
+has at least one canvas with one layer, but your projects can have multiple canvases each with multiple
+layers, and each layer can have one or many objects. That's the beauty of OmniGraffle; your projects can be
+as simple or as complex as they need to be.
+
+This section introduces you to OmniGraffle's \textbf{Sidebar}. You'll get to know how canvases, layers, and objects
+stack, how to reorder those items, and how to duplicate and share layers between canvases.
+
 \subsection{Getting to Know “The Stack”}
+Among design apps, layers are a ubiquitous concept. Layers hold the things you are working on and can be,
+well, layered upon each other to create more complex effects. This is known as the \textit{layer stack}
+because the layers in your project stack on top of each other.
+
+In OmniGraffle, there's also the addition of an \textit{object stack}, comprised of the objects on each
+layer, and the \textit{canvas stack} which, if you have \textbf{OmniGraffle Pro}, can include shared layers
+that appear in the other canvases of your project.
+
 \subsubsection{Working with Just One Layer}
+Your projects don't need to have multiple layers—everything can exist on a single layer—but once you grasp
+the concept you'll discover that layers can really make a difference in your work.
+
+Individual layers have an object stack, made up of the objects on that particular layer. For example, if you
+draw a square on the canvas and then draw a second one over part of the first square, the second square is
+above the first square in the object stack.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack01.png}
+\end{figure}
+When you look at the sidebar, you'll see that \textbf{square 2} is above \textbf{square 1} in the layer's
+object stack. This is because objects are stacked above each other in the order they're drawn on the canvas,
+regardless of their actual position on the canvas.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack02.png}
+\end{figure}
+To get \textbf{square 1} above \textbf{square 2}, you can do one of the following:
+\begin{itemize}
+  \item In the Sidebar, drag \textbf{square 1} above \textbf{square 2}:
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack03.png}
+    \end{figure}
+    As you drag \textbf{square 1} upward in the layer's object list, an \textit{insertion bar} appears to
+    help guide where you drop the object in the list.
+  \item Either on the canvas or in the sidebar, select \textbf{square 1} and then:
+    \begin{itemize}
+      \item Click \textbf{Bring to Front}
+        \raisebox{-0.3ex}{\includegraphics[height=1.8ex]{res/og7_button_bringtofront.png}} in the toolbar; or,
+      \item Choose \textbf{Arrange} $\blacktriangleright$ \textbf{Bring to Front (Shift-Command-F)}, or
+        \textbf{Arrange} $\blacktriangleright$ \textbf{Bring Forward (Option-Command-F)}.
+    \end{itemize}
+\end{itemize}
+With only two objects on the layer, there is no difference between \textbf{Bring to Front} and \textbf{Bring
+Forward}. However, if you have multiple objects on the layer, \textbf{Bring to Front} always places the
+selected object at the top of the object stack, while \textbf{Bring Forward} moves that object up one place
+in the stack.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack04.png}
+\end{figure}
+The same principle applies to using \textbf{Send to Back}
+(\raisebox{-0.3ex}{\includegraphics[height=1.8ex]{res/og7_button_sendtoback.png}}) and \textbf{Send Backward}.
+\textbf{Send to Back} sends the selected object to the bottom of the object stack, while \textbf{Send
+Backward} moves the
+object one place lower in the stack.
+
 \subsubsection{Managing Multiple Layers}
+Layers provide a way for you to compartmentalize and focus on certain aspects of your design individually
+without splitting things out into separate projects. For example, you can turn off a layer's visibility so
+you can focus on something on a different layer, or lock in place a layer that's lower in the stack while you
+work on something higher up.
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=gray!15,
+    colframe=gray!15,
+    borderline west={2pt}{0pt}{blue!80},
+    boxsep=0pt,
+    left=1em,
+    right=1em,
+    top=1.2em,
+    bottom=1em,
+    title=Note,
+    fonttitle=\bfseries\color{black},
+    attach boxed title to top left={yshift=-0.8em, xshift=1em},
+    boxed title style={
+      colback=gray!20,
+      colframe=gray!20,
+      rounded corners,
+      boxsep=0.3em,
+      top=0.1em,
+      bottom=0.1em
+    }
+  ]
+  In Diagramming Basics, you will create a simple diagram, to which you will add a layer for working with the
+  diagram's title text.
+\end{tcolorbox}
+To reorganize a canvas's layers, you drag them up or down in the stack in the Sidebar. Unlike objects, there
+are no keyboard shortcuts or toolbar buttons for raising or lowering a layer's position in the stack.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack05.png}
+\end{figure}
+
+Moving \textbf{Layer 1} above \textbf{Layer 3} in this example simply places the square on a higher level
+than \textbf{Layer 2}, which contains the circle. The end result of raising Layer 1 in the stack is the
+square now overlaps the circle:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack06.png}
+\end{figure}
+
 \subsubsection{Managing Projects with Multiple Canvases}
+Like layers, your OmniGraffle projects can have one or many canvases. And, similar to layers, you can
+reorganize them in the Sidebar by dragging them up or down to a different position.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack07.png}
+\end{figure}
+However, unlike layers, which adhere to the settings of the canvas (which you specify in the \textbf{Canvas}
+inspectors), the canvases in your project can have different properties. For example, you could have
+different canvases for laying out a project that needs to be printed in a range of sizes, from standard US
+letter size, to A4, to poster-sized.
+
+In addition to reordering canvases in the Sidebar, you can also drag layers and objects from one canvas to
+another. To duplicate a layer or object and add it to another canvas, hold the \textbf{Option} key and drag
+it into the canvas or layer where you'd like it.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{res/og7_layers_layerstack08.png}
+\end{figure}
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=gray!15,
+    colframe=gray!15,
+    borderline west={2pt}{0pt}{blue!80},
+    boxsep=0pt,
+    left=1em,
+    right=1em,
+    top=1.2em,
+    bottom=1em,
+    title=Note,
+    fonttitle=\bfseries\color{black},
+    attach boxed title to top left={yshift=-0.8em, xshift=1em},
+    boxed title style={
+      colback=gray!20,
+      colframe=gray!20,
+      rounded corners,
+      boxsep=0.3em,
+      top=0.1em,
+      bottom=0.1em
+    }
+  ]
+  If you have \textbf{OmniGraffle Pro}, you can also have \textbf{Shared Layers}, which appear on multiple
+  canvases in your
+  project. For more information about shared layers, see Sharing Layers with Multiple Canvases (PRO)
+\end{tcolorbox}
+
+You can also use the Style Brush to copy styles applied to objects on one canvas, and apply them to objects
+on another canvas. Similarly, you can use the Style Tray at the bottom of the inspector sidebar to drag
+styles from one canvas to another. This is particularly helpful for when you've set a Canvas Fill on one
+canvas and want to apply that same styling to the other canvases in your project.
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=gray!15,
+    colframe=gray!15,
+    borderline west={2pt}{0pt}{blue!80},
+    boxsep=0pt,
+    left=1em,
+    right=1em,
+    top=1.2em,
+    bottom=1em,
+    title=Note,
+    fonttitle=\bfseries\color{black},
+    attach boxed title to top left={yshift=-0.8em, xshift=1em},
+    boxed title style={
+      colback=gray!20,
+      colframe=gray!20,
+      rounded corners,
+      boxsep=0.3em,
+      top=0.1em,
+      bottom=0.1em
+    }
+  ]
+  To learn more about the Sidebar, see Managing Canvases, Layers, and Objects in the Sidebar later in this guide.
+\end{tcolorbox}
+
 \section{The Inspector Sidebar}
+Along the right side of OmniGraffle's window you'll find the \textbf{Inspectors}. The concept of Inspectors
+is fairly common among macOS apps. For example, you'll find Inspectors in Pages, Keynote, and Numbers, and a
+bunch of other popular Mac apps. Inspectors are used to help you style things and apply various settings to
+your documents and projects.
+
+The same concept applies here with OmniGraffle. The Inspector sidebar contains four tabs which contain all of
+the controls you need to style objects, text, add properties to the canvas, and searchable metadata do your
+projects. Here's a quick rundown of what you'll find:
+\begin{itemize}
+  \item The \textbf{Object} and \textbf{Properties} inspectors let you control the appearance and properties
+    of the objects on the canvas. First select an object on the canvas, and then, for example, use the Object
+    inspectors to add a Fill color, or the Properties inspector to change the way objects accept line
+    connections from other objects.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_concepts_objpropinspectors.png}
+    \end{figure}
+  \item Use the \textbf{Canvas} inspectors to define the properties of the current canvas. If your
+    OmniGraffle project has more than one canvas, you can set the canvas properties independent of each
+    other, and if you have OmniGraffle Pro, you can use \textbf{Shared Layers} to share layers and objects
+    between canvases.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_concepts_canvasinspectors.png}
+    \end{figure}
+  \item Use the \textbf{Document} inspectors to choose how your OmniGraffle projects are saved, configure
+    margins for printing, and add metadata related to the project. The information you add to the
+    \textbf{Document Data} inspector is exposed to macOS's Spotlight search, so you can quickly find and open
+    an OmniGraffle project.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_concepts_documentinspectors.png}
+    \end{figure}
+\end{itemize}
+There's a lot more to the Inspectors than what can be covered in this chapter. To learn more about the
+Inspectors, see Working With the Inspectors later in this guide.
+\begin{itemize}
+  \item Use the \textbf{Stencil Browser}, located at the far right of the tab bar, to use, locate, and add
+    stencils to OmniGraffle. To learn more about stencils, see Using, Curating, and Creating Stencils later
+    in this guide.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\textwidth]{res/og7_concepts_stencilsinspector.png}
+    \end{figure}
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
