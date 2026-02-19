@@ -1,5 +1,5 @@
 %!TEX program = xelatex
-\documentclass[12pt, a4paper]{book}
+\documentclass[12pt, a4paper]{ctexbook}
 
 \usepackage{art-book}
 \usepackage[style = gb7714-2015, backend = biber, sorting = ynt]{biblatex}
@@ -18,9 +18,8 @@
 \mainmatter
 \pagenumbering{arabic}
 
+\subfile{dbg/init.tex}
 \subfile{basics/init.tex}
 \subfile{in-depth/init.tex}
-% \subfile{app/init.tex}
-% \subfile{cs/init.tex}
 \printbibliography[title={参考文献}]
 \end{document}

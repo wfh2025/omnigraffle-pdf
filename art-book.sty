@@ -5,22 +5,16 @@
 \usepackage{subfiles}
 \usepackage{listings}
 \usepackage{graphicx}
-\usepackage[table]{xcolor}
+\usepackage{xcolor}
 \usepackage[skins]{tcolorbox}
-\usepackage[
-  colorlinks = true,
-  linkcolor = black,
-  bookmarks = true,
-  citecolor = black,
-  urlcolor = blue,
-  anchorcolor = black,
-  pdfstartview = FitH,
-  bookmarksnumbered = true, % PDF书签编号
-]{hyperref}
 
 % 显示特殊符号:
 % - \blacktriangleright
 \usepackage{amssymb}
+
+% 计算文本/内容宽度
+% \widthof
+\usepackage{calc}
 
 \usepackage{enumitem}
 \setlist[itemize] {
@@ -36,3 +30,50 @@
 
 \setcounter{tocdepth}{4}    % 目录显示级别
 \setcounter{secnumdepth}{3} % 章节编号级别
+
+% 生成随机数据
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{pifont}
+
+\usepackage[
+  colorlinks = true,
+  linkcolor = black,
+  bookmarks = true,
+  citecolor = black,
+  urlcolor = blue,
+  anchorcolor = black,
+  pdfstartview = FitH,
+  bookmarksnumbered = true, % PDF书签编号
+]{hyperref}
+
+% dbg环境/命令
+% 命令行查找package: texdoc float
+% 在线查找package: https://ctan.org/pkg/
+\ifdefined\enddbg_termDesc
+\PackageError{art}{symbols already defined.}{rename it}
+\else
+\newenvironment{dbg_termDesc}{
+  \begin{description}[
+        style=nextline,
+        leftmargin=0em,
+        labelwidth=0em,
+        labelsep=0em,
+        itemsep=0em,
+        itemindent=0em,
+        parsep=0em,
+        topsep=0em,
+        align=left,
+        font=\bfseries\color{blue!80!black},
+      ]
+    }{
+  \end{description}
+}
+\fi
+
+% 无缩进全屏横线
+\newcommand{\dbgsepline}{%
+  \vspace{0ex}%                   % 上方间距
+  \noindent\rule{\textwidth}{2pt}%  % 无缩进全屏横线
+  \vspace{0ex}%                   % 下方间距
+}%
